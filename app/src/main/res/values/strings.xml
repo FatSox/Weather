@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+
+    <string name="coordinates_label">координаты: </string>
+    <string name="feels_like_label">ощущение</string>
+    <string name="wind_label">ветер</string>
+    <string name="wind_direction_label">направление</string>
+
+    <string name="north_label">северный</string>
+    <string name="east_label">восточный</string>
+    <string name="west_label">западный</string>
+    <string name="south_label">южный</string>
+    <string name="north_east_label">северо- восточный</string>
+    <string name="north_west_label">северо- западный</string>
+    <string name="south_east_label">юго- восточный</string>
+    <string name="south_west_label">юго- западный</string>
+    <string name="unknown_direction_label">неизвестный</string>
+
+    <string name="wind_speed_text">%1$.1f м/c</string>
+    <string name="coordinates_text">%1$s</string>
+
+    <string name="waiting_label">Получение данных</string>
+
+    <string name="no_google_error">Невозможно получить геолокацию: сервисы Google не установлены</string>
+    <string name="data_load_error">Ошибка получения данных: %1$s</string>
+    <string name="no_location_permissions_error">Невозможно получить геолокацию: нет доступа</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

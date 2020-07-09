@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CurrentWeatherFragment">
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/waiting_label"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+
+
+    <TextView
+        android:id="@+id/coordinatesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginVertical="16dp"
+        android:layout_marginHorizontal="28dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cityButt"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/cityButt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выбрать"
+        app:layout_constraintStart_toEndOf="@id/coordinatesTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/temperatureTextView"
+        android:layout_width="64dp"
+        android:layout_height="68dp"
+        style="@style/TextViewStyle"
+        android:textSize="32sp"
+        app:layout_constraintTop_toBottomOf="@id/coordinatesTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/weatherTypeImageView"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/weatherTypeImageView"
+        android:layout_width="64dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@id/coordinatesTextView"
+        app:layout_constraintStart_toEndOf="@id/temperatureTextView"
+        app:layout_constraintEnd_toStartOf="@id/weatherTypeTextView"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/weatherTypeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="68dp"
+        android:maxWidth="128dp"
+        style="@style/TextViewStyle"
+        app:layout_constraintStart_toEndOf="@id/weatherTypeImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/coordinatesTextView"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/feelsLikeTemperatureLabel"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:text="@string/feels_like_label"
+        style="@style/LabelStyle"
+        app:layout_constraintTop_toBottomOf="@id/temperatureTextView"
+        app:layout_constraintStart_toStartOf="@id/feelsLikeTemperatureTextView"
+        app:layout_constraintEnd_toEndOf="@id/feelsLikeTemperatureTextView"
+        app:layout_constraintBottom_toTopOf="@id/feelsLikeTemperatureTextView"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/feelsLikeTemperatureTextView"
+        android:layout_width="64dp"
+        android:layout_height="48dp"
+        style="@style/TextViewStyle"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/feelsLikeTemperatureLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/windSpeedTextView"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:visibility="visible"/>
+
+
+
+    <TextView
+        android:id="@+id/windSpeedLabel"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:text="@string/wind_label"
+        style="@style/LabelStyle"
+        app:layout_constraintTop_toBottomOf="@id/temperatureTextView"
+        app:layout_constraintStart_toStartOf="@id/windSpeedTextView"
+        app:layout_constraintEnd_toEndOf="@id/windSpeedTextView"
+        app:layout_constraintBottom_toTopOf="@id/windSpeedTextView"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/windSpeedTextView"
+        android:layout_width="64dp"
+        android:layout_height="48dp"
+        style="@style/TextViewStyle"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/windSpeedLabel"
+        app:layout_constraintStart_toEndOf="@id/feelsLikeTemperatureTextView"
+        app:layout_constraintEnd_toStartOf="@id/windDirectionTextView"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:visibility="visible"/>
+
+
+
+    <TextView
+        android:id="@+id/windDirectionLabel"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:text="@string/wind_direction_label"
+        style="@style/LabelStyle"
+        app:layout_constraintTop_toBottomOf="@id/temperatureTextView"
+        app:layout_constraintStart_toStartOf="@id/windDirectionTextView"
+        app:layout_constraintEnd_toEndOf="@id/windDirectionTextView"
+        app:layout_constraintBottom_toTopOf="@id/windDirectionTextView"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/windDirectionTextView"
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        style="@style/TextViewStyle"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/windDirectionLabel"
+        app:layout_constraintStart_toEndOf="@id/windSpeedTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:visibility="visible"/>
+
+    <Button
+        android:id="@+id/forecastButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Прогноз погоды"
+        app:layout_constraintTop_toBottomOf="@id/feelsLikeTemperatureTextView"
+        app:layout_constraintStart_toStartOf="@id/feelsLikeTemperatureTextView"
+        app:layout_constraintEnd_toEndOf="@id/windDirectionTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
